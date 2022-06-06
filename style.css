@@ -50,6 +50,22 @@ body {
     padding: 20px 30px;
 }
 
+.cart-n-label{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-in-c-label {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #737373;
+    color: #E7FF54;
+}
 
 #footer {
     display: flex;
@@ -151,6 +167,17 @@ body {
 
 /* product page */
 
+.add-to-cart-notification {
+    position: absolute;
+    right: 10px;
+}
+
+.add-to-cart-notification.active {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+}
+
 #header-prod{
     display: flex;
     position: fixed;
@@ -225,17 +252,10 @@ body {
     color: #E7FF54;
 }
 
-.s-prod-dis .size-button {
-    text-decoration: none;
-    text-align: center;
-    font-size: 18px;
-    border: none;
-    width: 40px;
-    height: 40px;
-    background: #AAAAAA;
-    margin-right: 20px;
-    margin-top: 35px;
-
+.s-prod-dis .size-button:hover{
+    cursor: pointer;
+    background-color: #737373;
+    color: #E7FF54;
 }
 
 .s-prod-dis .note {
@@ -247,7 +267,37 @@ body {
     padding-top: 30px;
 }
 
-/* cart page */
+.radio-size {
+    display: inline-block;
+}
+.radio-size input {
+    display: none;
+}
+.radio-size label {
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background: #AAAAAA;
+    margin-right: 20px;
+    margin-top: 35px;
+    user-select: none;
+
+}
+.radio-size input:checked + label{
+    background: #737373;
+    color: #E7FF54;
+}
+
+.radio-size label:hover {
+    background: #737373;
+}
+
+
+/* cart */
 
 #cart {
     display: flex;
@@ -261,11 +311,15 @@ body {
 .make-order {
     margin-top: 60px;
     margin-left: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .make-order .order-input {
     margin-top: 30px;
+}
+
+.make-order .order-input input {
+    padding-left: 15px;
 }
 
 .make-order .order-input p {
@@ -277,7 +331,14 @@ body {
     width: 425px;
     margin-top: 10px;
     background-color: #AAAAAA;
+    align-items: center;
 }
+
+.make-order .order-input input:focus {
+    outline: none;
+    outline-color:#E7FF54
+}
+
 .make-order button {
     text-decoration: none;
     text-align: center;
@@ -323,8 +384,8 @@ body {
 }
 
 .s-prod-in-cart input{
+    display: inline-flex;
     border: none;
-    text-align: center;
     color: black;
     height: 40px;
     width: 40px;
@@ -332,10 +393,17 @@ body {
     background: #AAAAAA;
 }
 
+.s-prod-in-cart .minus, .plus {
+    width: 16px;
+    height: 16px;
+}
+.s-prod-in-cart .delete-prod {
+    width: 24px;
+    height: 24px;
+}
+
 .s-prod-in-cart button:hover{
     background: #AAAAAA;
-    width: fit-content;
-    height: fit-content;
 }
 
 .s-prod-in-cart .prod-div1 {
@@ -354,20 +422,32 @@ body {
 }
 .quantity {
     display: flex;
+    text-align: center;
     flex-direction: row;
-    justify-content: left;
     align-items: center;
 }
 
 .quantity input {
+    text-align: center;
+    align-items: center;
     margin: 0px 15px;
 }
 
-#total-price {
+.itogo {
+    align-items: baseline;
+    display: flex;
     font-size: 24px;
     margin-top: 30px;
     margin-left: 15%;
     margin-bottom: 100px;
+}
+.itogo span {
+    font-size: 18px;
+    font-weight: 800;
+}
+.itogo p {
+    margin-left: 20px;
+    font-size: 18px;
 }
 #total-price span{
     font-weight: 800;

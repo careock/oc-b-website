@@ -3,13 +3,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ocb store</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
 </head>
 
 <body>
 
 <section id="header-prod">
     <a href="store.html"><img src="img/close.svg" class="" alt=""></a>
-    <a href="cart.html"><img src="img/cart.svg"></a>
+    <div class="cart-n-label">
+        <a href="cart.html"><i class="1"><img src="img/cart.svg"></i></a>
+        <input class="p-in-c-label" value="0" disabled>
+    </div>
 </section>
 
    <section id = prod-details>
@@ -37,11 +41,28 @@
    <div class="s-prod-dis">
        <h1>Футболка // ХОЛОДНО</h1> 
        <h1 class="price">100 рублей</h1>
-       <div><button class="size-button">XS</button>
-        <button class="size-button">S</button>
-        <button class="size-button">M</button>
-        <button class="size-button">L</button></div>
-       <button class="normal">В КОРЗИНУ</button>
+    
+
+    <div class="radio-sizes">
+        <div class="radio-size">
+            <input  type="radio" name="contact" id="XS">
+            <label for="XS">XS</label>
+        </div>
+        <div class="radio-size">
+            <input  type="radio" name="contact" id="S">
+            <label for="S">S</label>
+        </div>
+        <div class="radio-size">
+            <input  type="radio" name="contact" id="M">
+            <label for="M">M</label>
+        </div>
+
+    </div>
+    
+
+
+
+       <button id="addInCart">В КОРЗИНУ</button>
        <p class="note">Lorem ipsum dolor sit amet, consectetur adipiscing 
            elitLorem ipsum dolor sit amet, consectetur adipiscing elitLorem 
            ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -49,10 +70,8 @@
    </div>
 
 </section>
-   
 
-</div>
-
+<script src="script.js"></script>
 </body>
 
 

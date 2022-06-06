@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ocb store</title>
     <link rel="stylesheet" href="style.css">
+    <script src="cart-script.js" async></script>
+    <script src="script.js" async></script>
 </head>
 
 <body>
 
     <section id="header">
-        <a href="store.html"><img src="img/logo.svg" class="" alt=""></a>
-        <a href="cart.html"><i class="1"><img src="img/cart.svg"></i></a>
+        <a href="store.html"><img src="img/logo.svg" id="cartIcon" alt=""></a>
+            <a href="cart.html"><i class="1"><img src="img/cart.svg"></i></a>
     </section>
 
 
     <section id="cart">
         <div class="prods-in-cart">
 
+
+
             <div class="s-prod-in-cart">   
                 <div>
                     <img src="img/sample t.png" alt="">
@@ -29,12 +33,33 @@
                         <p class="price-in-cart">100 рублей</p>
                     </div>
                     <div class="quantity">
-                        <button><img src="img/minus.svg" alt=""></button>
-                        <input type="text">
-                        <button> <img src="img/plus.svg" alt=""></button>
+                        <button class="minus"><img src="img/minus.svg" alt=""></button>
+                        <input class="cart-quantity-input" type="number" disabled value="1">
+                        <button class="plus"> <img src="img/plus.svg" alt=""></button>
                     </div>
                 </div>
-                <div><button class="delete prod"><img src="img/delete prod.svg" alt=""></button></div>
+                <div><button class="delete-prod"><img src="img/delete prod.svg" alt=""></button></div>
+            </div>
+
+
+
+
+            <div class="s-prod-in-cart">   
+                <div>
+                    <img src="img/sample t.png" alt="">
+                </div>
+                <div class="prod-div1">
+                    <div>
+                        <p class="prod-name-in-cart">Футболка // ХОЛОДНО</p>
+                        <p class="price-in-cart">100 рублей</p>
+                    </div>
+                    <div class="quantity">
+                        <button class="minus"><img src="img/minus.svg" alt=""></button>
+                        <input class="cart-quantity-input" type="number" disabled value="5">
+                        <button class="plus"> <img src="img/plus.svg" alt=""></button>
+                    </div>
+                </div>
+                <div><button class="delete-prod"><img src="img/delete prod.svg" alt=""></button></div>
             </div>
 
             <div class="s-prod-in-cart">   
@@ -47,18 +72,24 @@
                         <p class="price-in-cart">100 рублей</p>
                     </div>
                     <div class="quantity">
-                        <button><img src="img/minus.svg" alt=""></button>
-                        <input type="text">
-                        <button> <img src="img/plus.svg" alt=""></button>
+                        <button class="minus"><img src="img/minus.svg" alt=""></button>
+                        <input class="cart-quantity-input" type="number" disabled value="5">
+                        <button class="plus"> <img src="img/plus.svg" alt=""></button>
                     </div>
                 </div>
-                <div><button class="delete prod"><img src="img/delete prod.svg" alt=""></button></div>
+                <div><button class="delete-prod"><img src="img/delete prod.svg" alt=""></button></div>
             </div>
 
-            <p id="total-price"><span>ВСЕГО:</span>200 рублей</p>
+            
+            <div class="itogo">
+                <span>ВСЕГО:</span>
+                <p class="total-price">200 рублей</p>
+            </div>
+            
         </div>
 
         <div class="make-order">
+            <form>
             <div class="order-input">
                 <p>твое имя:</p>
                 <input type="text">
@@ -69,8 +100,9 @@
             </div>
             <div class="order-input">
                 <p>твой телефон:</p>
-                <input type="text">
+                <input type="text" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
             </div>
+            </form>
             <div class="oformit-zakaz"><button>ОФОРМИТЬ ЗАКАЗ</button></div>
         </div>
 
@@ -98,7 +130,6 @@
             <a id = "logof" href="index.html"><img src="img/logo f.svg"></a>
     </section>
 
-    <script src="script.js"></script>
 </body>
 
 </html>

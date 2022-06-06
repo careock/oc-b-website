@@ -1,5 +1,5 @@
-<svg width="51" height="38" viewBox="0 0 51 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="-3" x2="50.0075" y2="-3" transform="matrix(0.99985 -0.0172947 0.010848 0.999941 1 6.86487)" stroke="#E7FF54" stroke-width="6"/>
-<line y1="-3" x2="50.0075" y2="-3" transform="matrix(0.99985 -0.0172947 0.010848 0.999941 1 22.4324)" stroke="#E7FF54" stroke-width="6"/>
-<line y1="-3" x2="50.0075" y2="-3" transform="matrix(0.99985 -0.0172947 0.010848 0.999941 1 38)" stroke="#E7FF54" stroke-width="6"/>
+<svg width="50" height="36" viewBox="0 0 50 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="6" fill="#E7FF54"/>
+<rect y="15" width="50" height="6" fill="#E7FF54"/>
+<rect y="30" width="50" height="6" fill="#E7FF54"/>
 </svg>
